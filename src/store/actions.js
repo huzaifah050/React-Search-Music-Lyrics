@@ -32,6 +32,14 @@ export const fetchTrackFailure = (err) => {
   };
 };
 
+
+export const searchTrack = (tracks) => {
+  return {
+    type: 'SEARCH_TRACKS',
+    payload: tracks
+  }
+
+}
 export const fetchTracks = () => {
   return (dispatch) => {
     dispatch(fetchTrackRequest);
@@ -49,3 +57,5 @@ export const fetchTracks = () => {
       });
   };
 };
+
+
