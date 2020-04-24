@@ -29,14 +29,14 @@ const reducer = (state = initState, action) => {
         trackList: [],
         error: action.payload,
       };
-    
+
     case 'SEARCH_TRACKS':
       return {
         ...state,
         loading: false,
         trackList: action.payload,
-        heading: 'Searched tracks'
-      }
+        heading: 'Searched Tracks..',
+      };
     default:
       return state;
   }

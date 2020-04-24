@@ -26,6 +26,10 @@ class Search extends Component {
           this.props.searchTrack(res.data.message.body.track_list);
         })
         .catch((err) => console.log(err.message));
+
+      this.setState({
+        trackTitle: '',
+      });
     } else {
       return;
     }
@@ -45,6 +49,7 @@ class Search extends Component {
             onChange={this.handleChange}
             className="form-control form-control-lg"
             placeholder="Song title.."
+            value={this.state.trackTitle}
           />
           <button
             className="btn btn-primary btn-lg btn-block mt-3"
