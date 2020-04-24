@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
-
+import Loading from '../layouts/Loading';
 class Lyrics extends Component {
   state = {
     track: {},
@@ -72,9 +72,9 @@ class Lyrics extends Component {
           </ul>
         </React.Fragment>
       );
+    } else {
+      return <Loading />;
     }
-
-    return <div></div>;
   }
 }
 
